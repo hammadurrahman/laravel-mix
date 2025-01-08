@@ -50,7 +50,7 @@ function uniteRules(rules, key, newRule, rule) {
     // newRule.loader should always override use, loaders and oneOf
     if (newRule.loader) {
         const optionsKey = newRule.options ? 'options' : newRule.query && 'query';
-
+// 1. https://github.com/survivejs/webpack-merge/blob/v4.2.2/src/index.js
         delete rule.use;
         delete rule.loaders;
         delete rule.oneOf;
